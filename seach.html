@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="body">
+  <header>
+    <nav class="main_nav">
+      <ul class="site_nav">
+        <li><a href="#">ИНФОРМАЦИЯ</a></li>
+        <li><a href="#">ФОТО И ВИДЕО</a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#">КАРТА ШТАТА</a></li>
+        <li><a href="#">ГОСТИНИЦЫ</a></li>
+      </ul>
+      <div class="logo"><a href="index.html"><img width="138" height="70" src="img/logo.png" alt="Логотип"></a></div>
+    </nav>
+  </header>
+  <main>
+    <section class="filter">
+      <!--Здесь будет фильтр-->
+      <div class="filter_sort_option">
+        <div class="filter_option">
+          <p>ИНФРАСТРУКТУРА:</p>
+          <label class="sort_option" for="pool">
+            <input class="checkbox_sort_option" type="checkbox" id="pool" name="pool">
+            <span class="fake_checkbox_sort_option"></span>
+            <span>БАССЕЙН</span>
+          </label>
+          <label class="sort_option" for="parking">
+            <input class="checkbox_sort_option" type="checkbox" id="parking" name="parking">
+            <span class="fake_checkbox_sort_option"></span>
+            <span>ПАРКОВКА</span>
+          </label>
+          <label class="sort_option" for="wi_fi">
+            <input class="checkbox_sort_option" type="checkbox" id="wi_fi" name="WI-FI">
+            <span class="fake_checkbox_sort_option"></span>
+            <span>WI-FI</span>
+          </label>
+        </div>
+        <div class="filter_option">
+          <p>ТИП ЖИЛЬЯ:</p>
+          <label class="sort_option" for="hotel">
+            <input class="checkbox_sort_option" type="checkbox" id="hotel" name="hotel">
+            <span class="fake_checkbox_sort_option"></span>
+            <span>ГОСТИННИЦА</span>
+          </label>
+          <label class="sort_option" for="motel">
+            <input class="checkbox_sort_option" type="checkbox" id="motel" name="motel">
+            <span class="fake_checkbox_sort_option"></span>
+            <span>МОТЕЛЬ</span>
+          </label>
+          <label class="sort_option" for="apartments">
+            <input class="checkbox_sort_option" type="checkbox" id="apartments" name="apartments">
+            <span class="fake_checkbox_sort_option"></span>
+            <span>АПАРТАМЕНТЫ</span>
+          </label>
+        </div>
+      </div>
+      <div class="filter_price">
+        <p>СТОЙМОСТЬ В СУТКИ (Р):</p>
+        <div class="price_category">
+          <p class="price_entry_field">ОТ <label for="price_entry_field_min"></label><input id="price_entry_field_min" type="text" size="10"></p>
+          <p class="price_entry_field">ДО <label for="price_entry_field_max"></label><input id="price_entry_field_max" type="text" size="10"></p>
+        </div>
+        <div class="price_slide_container">
+          <label for="scroll_min_price"></label>
+          <input id="scroll_min_price" type="range" min="1" max="3500" value="50" class="left_price_slider">
+          <label for="scroll_max_price"></label>
+          <input id="scroll_max_price" type="range" min="1" max="3500" value="50" class="right_price_slider">
+        </div>
+        <button class="show_result">ПОКАЗАТЬ</button>
+      </div>
+    </section>
+    <section class="sorting">
+      <!--Здесь будет сортировка-->
+      <h1 class="title_hostel">НАЙДЕНО: 3</h1>
+      <p class="main_text_sorting">СОРТИРОВКА:</p>
+      <div class="container_checkbox_sorting" id="container_checkbox_sorting">
+        <label class="text_sorting" for="button0">
+          <input class="not_highlighted" type="button" id="button0" value="ПО ЦЕНЕ">
+        </label>
+        <label class="text_sorting" for="button1">
+          <input class="not_highlighted" type="button" id="button1" value="ПО ТИПУ">
+        </label>
+        <label class="text_sorting" for="button2">
+          <input class="not_highlighted" type="button" id="button2" value="ПО РЕЙТИНГУ">
+        </label>
+      </div>
+    </section>
+    <section>
+      <div class="found_hotel_list">
+        <div class="found_hotel_item">
+          <img width="135" height="90" src="img/amara-resort.png" alt="ГОСТИНИЦА">
+          <div class="hostel">
+            <h2 class="title_hostel">AMARA RESORT & SPA</h2>
+            <div class="text_hostel">
+              <p class="kind_hostel">ГОСТИНИЦА</p>
+              <p class="prise_hostel">ОТ 4000 Р.</p>
+            </div>
+            <div class="button_hostel">
+              <button class="button_details">Подробнее</button>
+              <button class="button_booking">Забронировать</button>
+            </div>
+          </div>
+          <div class="rating">
+            <div class="star_rating">
+              <img height="17" width="19" src="img/star.png" alt="star">
+              <img height="17" width="19" src="img/star.png" alt="star">
+              <img height="17" width="19" src="img/star.png" alt="star">
+              <img height="17" width="19" src="img/star.png" alt="star">
+            </div>
+            <div class="point_rating"><p>РЕЙТИНГ: 8,5</p></div>
+          </div>
+        </div>
+        <div class="found_hotel_item">
+          <img width="135" height="90" src="img/desert-quail.png" alt="МОТЕЛЬ">
+          <div class="hostel">
+            <h2 class="title_hostel">DESERT QUAIL INN</h2>
+            <div class="text_hostel">
+              <p class="kind_hostel">МОТЕЛЬ</p>
+              <p class="prise_hostel">ОТ 3000 Р.</p></div>
+            <div class="button_hostel">
+              <button class="button_details">Подробнее</button>
+              <button class="button_booking">Забронировать</button>
+            </div>
+          </div>
+          <div class="rating">
+            <div class="star_rating">
+              <img height="17" width="19" src="img/star.png" alt="star">
+              <img height="17" width="19" src="img/star.png" alt="star">
+              <img height="17" width="19" src="img/star.png" alt="star">
+            </div>
+            <div class="point_rating"><p>РЕЙТИНГ: 8,9</p></div>
+          </div>
+        </div>
+        <div class="found_hotel_item">
+          <img width="135" height="90" src="img/rectangle.png" alt="АПАРТАМЕНТЫ">
+          <div class="hostel">
+            <h2 class="title_hostel">VILLAS AT POCO DIABLO</h2>
+            <div class="text_hostel">
+              <p class="kind_hostel">АПАРТАМЕНТЫ</p>
+              <p class="prise_hostel">ОТ 2000 Р.</p></div>
+            <div class="button_hostel">
+              <button class="button_details">Подробнее</button>
+              <button class="button_booking">Забронировать</button>
+            </div>
+          </div>
+          <div class="rating">
+            <div class="star_rating">
+              <img height="17" width="19" src="img/star.png" alt="star">
+              <img height="17" width="19" src="img/star.png" alt="star">
+            </div>
+            <div class="point_rating"><p>РЕЙТИНГ: 9,2</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main_footer">
+    <div class="number_footer">
+      <span class="hashtag">#VISITSEDONA</span><br>
+      <a href="#" type="tel"><span class="number">ТЕЛ: +7(495) 666-01-66</span></a>
+    </div>
+
+    <ul class="social_network_list">
+      <li class="social_network_item"><a href="#"><img width="17" height="17" src="img/twitter.png" alt="twitter"></a>
+      </li>
+      <li class="social_network_item"><a href="#"><img width="12" height="22" src="img/fb-icon.png" alt="facebook"></a>
+      </li>
+      <li class="social_network_item"><a href="#"><img width="20" height="16" src="img/youtube.png" alt="youtube"></a>
+      </li>
+    </ul>
+
+    <div class="html_academy_footer">
+      <span class="html_academy">WEBSITE BY</span>
+      <a href="https://htmlacademy.ru"><img width="114" height="40" src="img/logo-htmlacademy.png"
+                                            alt="html-academy"></a>
+    </div>
+  </footer>
+</div>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
